@@ -1,7 +1,12 @@
 # Проектная работа TheRickAndMorty
 
 Данный проект выполнен как тестовое задание
-Размещёно на github-pages по ссылке:
+Размещёно на github-pages по ссылке: https://nevedomskiy.github.io/Rick-and-Morty/
+Чтобы запустить проект локально:
+-скопируйте репозеторий git clone https://github.com/Nevedomskiy/Rick-and-Morty.git
+-установите зависимости npm i
+-удалите приставку .example с файла .env
+-запустите проект командой npm run start
 
 ## ТЗ:
 
