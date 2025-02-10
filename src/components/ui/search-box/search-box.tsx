@@ -33,7 +33,6 @@ export const SearchBox: FC = () => {
         const filteredArr = selectedCharacters.filter((item) =>
           item.name.toLowerCase().includes(e.target.value.toLowerCase())
         );
-        console.log(filteredArr);
         dispatch(setUpdateSelectedCharacters(filteredArr));
       }
     }

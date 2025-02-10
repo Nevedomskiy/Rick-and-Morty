@@ -62,7 +62,6 @@ export const Character: FC = () => {
   if (character.episode.length !== 0) {
     episodes = character.episode.map((url) => url.split('/').pop()).join(', ');
   }
-  console.log(character.created);
   return (
     <div className={styles.character}>
       <div className={styles.character__header}>
