@@ -1,0 +1,9 @@
+.characters_list {
+  margin: 0;
+  padding: 0 20px;
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 600px));
+  grid-auto-rows: 1fr;
+}

@@ -1,0 +1,147 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  background-color: var(--lt-color-gray-100);
+  color: var(--lt-color-white-100);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.character_info {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 230fr 290fr;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  border: 2px solid var(--lt-color-gray-100);
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 30px;
+  background-color: var(--lt-color-orange-100);
+  opacity: 0;
+  padding: 0 30px 20px 0;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.652);
+  transition: 0.5s;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 110, 75, 0.404);
+  clip-path: polygon(0 0, 0% 86%, 86% 0);
+  border-radius: 1px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -4px) rotate(45deg);
+  transition: 0.3s;
+}
+
+.character_info:hover {
+  border: 2px solid var(--lt-color-orange-100);
+}
+.character_info:hover .tooltip {
+  opacity: 1; 
+}
+.text {
+  margin: 0;
+}
+
+.location {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.title {
+  font-size: 16px;
+  color: #8f96a3;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 27px;
+  margin: 0;
+  font-weight: 800;
+}
+
+.gender {
+  font-weight: 500;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.text_grey {
+  color: rgb(158, 158, 158);
+}
+
+.container {
+  display: flex;
+}
+.container:hover {
+  display: flex;
+}
+
+.colorButton {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  color: var(--lt-color-gray-100);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 800;
+  transition: background-color 0.5s;
+}
+
+.green {
+  background-color: var(--lt-color-green-100);
+}
+.green:hover {
+  border: 2px solid var(--lt-color-orange-100);
+}
+
+.orange {
+  background-color: var(--lt-color-orange-100);
+}
+
+.orange:hover {
+  border: 2px solid var(--lt-color-green-100);
+}
+
+@media screen and (width <= 550px) {
+  .item {
+    grid-template-columns: 1fr;
+  }
+}

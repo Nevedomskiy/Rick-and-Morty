@@ -1,0 +1,67 @@
+.list {
+  display: flex;
+  justify-self: center;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+  gap: 10px;
+  font-size: 30px;
+  font-family: 'Schwifty', sans-serif;
+  color: #97ce4c;
+}
+
+.previous {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.break {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: rgb(158, 158, 158);
+}
+
+.active {
+  color: var(--lt-color-orange-100);
+}
+
+.next {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.item {
+  align-self: center;
+  cursor: pointer;
+}
+
+@media screen and (width <= 700px) {
+  .list {
+    font-size: 18px;
+    gap: 5px;
+  }
+}
+
+@media screen and (width <= 450px) {
+  .list {
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .next {
+    margin-left: 5px;
+  }
+
+  .break {
+    margin: 5px 0;
+  }
+
+  .previous {
+    margin-right: 5px;
+  }
+}
