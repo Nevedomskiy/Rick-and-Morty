@@ -1,1 +1,0 @@
-export { PaginatedItems } from './pagination';
