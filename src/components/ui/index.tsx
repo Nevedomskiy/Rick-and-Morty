@@ -8,4 +8,5 @@ export * from './modal';
 export * from './modal-overlay';
 export * from './pagination';
 export * from './preloader';
+export * from './redirect';
 export * from './search-box';

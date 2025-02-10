@@ -1,4 +1,5 @@
 import { Characters } from '@pages';
+import { Redirect } from '@ui';
 import { TCharacter } from '@utils-types';
 import { useEffect } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
@@ -147,7 +148,6 @@ const App = () => {
               />
             }
           >
-            {' '}
             <Route
               path='character/:id'
               element={
@@ -157,6 +157,7 @@ const App = () => {
               }
             />
           </Route>
+          <Route path='*' element={<Redirect />} />
         </Routes>
       </main>
       <AppFooter />
