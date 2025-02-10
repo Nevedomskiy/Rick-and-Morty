@@ -37,7 +37,7 @@ export const PaginatedItems: FC<TCharacterItemProps> = ({
   };
 
   if (quantityPages === undefined || currentPage === undefined) {
-    return null; 
+    return null;
   }
 
   return (

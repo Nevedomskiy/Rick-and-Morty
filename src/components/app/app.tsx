@@ -44,10 +44,10 @@ const App = () => {
     currentItems: TCharacter[];
   } {
     //захардкодил количество карточек на странице, при необходимости можно вынести в параметры функции
-    const endOffset = Number(page) * 2;
-    const itemOffset = endOffset - 2;
+    const endOffset = Number(page) * 18;
+    const itemOffset = endOffset - 18;
     const currentItems = selectedCharacters.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(selectedCharacters.length / 2);
+    const pageCount = Math.ceil(selectedCharacters.length / 18);
     return { pageCount, currentItems };
   }
   const { pageCount, currentItems } = countingPages(currentSelectedPage);
@@ -111,7 +111,7 @@ const App = () => {
   if (currentItems.length === 0 && currentSelectedPage !== 1) {
     dispatch(setUpdateСurrentSelectedPage(currentSelectedPage - 1));
   }
-  
+
   return (
     <div className={styles.app}>
       <AppHeader />

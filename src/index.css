@@ -9,6 +9,11 @@
   --lt-color-gray-300: #202329;
 }
 
+::selection {
+  background-color: var(--lt-color-gray-300);
+  color: var(--lt-color-orange-100);
+}
+
 body {
   box-sizing: border-box;
   color: var(--lt-color-gray-300);
