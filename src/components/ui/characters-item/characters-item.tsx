@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import {
   selectSelectedCharacters,
   setAddNewCharacter,
-  setRemoveCharacter
+  setRemoveCharacter,
+  setUpdatePopup
 } from '../../../services/slices/charactersSlice';
 import { useDispatch, useSelector } from '../../../services/store/store';
 import { containsCharacter } from '../../../utils/metods';
@@ -21,12 +22,26 @@ export const CharactersItem: FC<TCharacterItemProps> = ({ character }) => {
         'selectedCharacters',
         JSON.stringify([...selectedCharacters, character])
       );
+      dispatch(
+        setUpdatePopup({
+          isOpen: true,
+          title: 'The hero has been saved',
+          success: true
+        })
+      );
     } else {
       dispatch(setRemoveCharacter(character));
       const filteredArray = selectedCharacters.filter(
         (selectedCharacter) => selectedCharacter.id !== character.id
       );
       localStorage.setItem('selectedCharacters', JSON.stringify(filteredArray));
+      dispatch(
+        setUpdatePopup({
+          isOpen: true,
+          title: 'The hero has been deleted',
+          success: false
+        })
+      );
     }
     setChecked((prev) => !prev);
   };

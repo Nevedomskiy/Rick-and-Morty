@@ -7,6 +7,7 @@ export * from './hero-banner';
 export * from './modal';
 export * from './modal-overlay';
 export * from './pagination';
+export * from './popup';
 export * from './preloader';
 export * from './redirect';
 export * from './search-box';

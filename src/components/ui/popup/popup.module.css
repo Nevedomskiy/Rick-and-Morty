@@ -1,0 +1,28 @@
+.container {
+  /* transition: all 0.3s; */
+}
+.container_active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container_disabled {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popop__img {
+  width: 100%;
+  padding-top: 25%;
+  display: block;
+}
+
+.popop__img_true {
+  background: url('../../../assets/images/Union.svg') center / contain no-repeat
+    var(--lt-color-green-100);
+}
+
+.popop__img_false {
+  background: url('../../../assets/images/Fail.svg') center / contain no-repeat
+    var(--lt-color-orange-100);
+}

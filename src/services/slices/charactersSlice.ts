@@ -13,6 +13,11 @@ export interface charactersState {
   quantityPages: number;
   isLoading: boolean;
   isShowPreloader: boolean;
+  popup: {
+    isOpen: boolean;
+    title: string;
+    success: boolean;
+  };
   currentPage: number;
   currentPageSelected: number;
   validationError: boolean;
@@ -54,7 +59,12 @@ const initialState: charactersState = {
   error: null,
   searchValue: '',
   searchValueSelected: '',
-  validationError: false
+  validationError: false,
+  popup: {
+    isOpen: false,
+    title: '',
+    success: false
+  }
 };
 
 export const getCharactersPage = createAsyncThunk(
@@ -95,6 +105,16 @@ const charactersSlice = createSlice({
     },
     setUpdatePreloader: (state, action: PayloadAction<boolean>) => {
       state.isShowPreloader = action.payload;
+    },
+    setUpdatePopup: (
+      state,
+      action: PayloadAction<{
+        isOpen: boolean;
+        title: string;
+        success: boolean;
+      }>
+    ) => {
+      state.popup = action.payload;
     },
     setUpdateSearchValue: (state, action: PayloadAction<string>) => {
       state.searchValue = action.payload;
@@ -186,7 +206,8 @@ const charactersSlice = createSlice({
     selectQuantityPages: (state) => state.quantityPages,
     selectSearchValue: (state) => state.searchValue,
     selectValidationError: (state) => state.validationError,
-    selectSearchValueSelected: (state) => state.searchValueSelected
+    selectSearchValueSelected: (state) => state.searchValueSelected,
+    selectPopup: (state) => state.popup
   }
 });
 
@@ -194,6 +215,7 @@ export const charactersReducer = charactersSlice.reducer;
 export const {
   selectCharacters,
   selectIsLoading,
+  selectPopup,
   selectCurrentPage,
   selectIsShowPreloader,
   selectError,
@@ -212,5 +234,6 @@ export const {
   setRemoveCharacter,
   setUpdateValidationError,
   setUpdateSearchValue,
-  setUpdateSearchValueSelected
+  setUpdateSearchValueSelected,
+  setUpdatePopup
 } = charactersSlice.actions;

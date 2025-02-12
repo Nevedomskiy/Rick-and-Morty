@@ -9,6 +9,7 @@
   background-color: var(--lt-color-white-100);
   overflow: hidden;
 }
+
 .heroBanner__title {
   z-index: 2;
   margin: 0;
@@ -33,7 +34,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .heroBanner__img svg {
