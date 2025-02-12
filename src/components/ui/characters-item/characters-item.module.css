@@ -1,7 +1,7 @@
 .item {
   display: grid;
   grid-template-columns: 1fr 80px;
-  background-color: var(--lt-color-gray-100);
+  background-color: grey;
   color: var(--lt-color-white-100);
   border-radius: 20px;
   overflow: hidden;
@@ -54,7 +54,7 @@
   border: 2px solid var(--lt-color-orange-100);
 }
 .character_info:hover .tooltip {
-  opacity: 1; 
+  opacity: 1;
 }
 .text {
   margin: 0;
@@ -66,8 +66,8 @@
 }
 
 .title {
-  font-size: 16px;
-  color: #8f96a3;
+  font-size: 20px;
+  color: #000000;
 }
 
 .image {
@@ -81,6 +81,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.status {
+  font-size: inherit;
+  color: var(--lt-color-orange-100);
+}
+
+.status_green {
+  color: var(--lt-color-green-100);
+}
+
+.status_red {
+  color: red;
 }
 
 .name {

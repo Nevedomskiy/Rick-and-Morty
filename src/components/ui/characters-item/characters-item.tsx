@@ -44,11 +44,14 @@ export const CharactersItem: FC<TCharacterItemProps> = ({ character }) => {
             <div className={styles.content}>
               <div className={styles.section}>
                 <h2 className={styles.name}>{character.name}</h2>
-                <span className={styles.status}>
-                  <span className={styles.status__icon} />
-                  {`${character.status} -  
-            ${character.gender}`}
-                </span>
+                <p>
+                  <span
+                    className={`${styles.status} ${character.status.toLowerCase().indexOf('alive') !== -1 ? styles.status_green : ''} ${character.status.toLowerCase().indexOf('dead') !== -1 ? styles.status_red : ''}`}
+                  >
+                    {character.status}
+                  </span>
+                  {` - ${character.gender} `}
+                </p>
               </div>
               <div className={styles.section}>
                 <span className={styles.title}>Last known location:</span>

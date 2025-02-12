@@ -3,7 +3,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
-module.exports = (env, argv) => {
+module.exports = (argv) => {
   const isProduction = argv.mode === 'production';
 
   return {
@@ -89,7 +89,7 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, './dist'),
       filename: isProduction ? '[name].[contenthash].js' : 'bundle.js',
-      clean: true // Очищает выходную папку перед каждой сборкой
+      clean: true
     },
     devServer: {
       static: path.join(__dirname, './dist'),
@@ -97,6 +97,6 @@ module.exports = (env, argv) => {
       historyApiFallback: true,
       port: 4000
     },
-    mode: isProduction ? 'production' : 'development' // Устанавливаем режим
+    mode: isProduction ? 'production' : 'development'
   };
 };

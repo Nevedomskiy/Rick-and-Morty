@@ -32,6 +32,10 @@ a {
   color: inherit;
 }
 
+p {
+  margin: 0;
+}
+
 a:visited {
   color: inherit;
 }
