@@ -40,6 +40,7 @@ const App = () => {
   const selectedCharacters = useSelector(selectSelectedCharacters);
   const searchValue: string = useSelector(selectSearchValue);
   const searchValueSelected: string = useSelector(selectSearchValueSelected);
+
   function countingPages(page: number): {
     pageCount: number;
     currentItems: TCharacter[];
@@ -54,11 +55,7 @@ const App = () => {
   const { pageCount, currentItems } = countingPages(currentSelectedPage);
 
   const closeModal = () => {
-    if (location.pathname.indexOf('selected-characters') !== -1) {
-      navigate('/selected-characters');
-    } else {
-      navigate('/');
-    }
+    navigate(-1);
   };
 
   useEffect(() => {

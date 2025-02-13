@@ -5,7 +5,7 @@ import { BackMenuProps } from './type';
 
 export const BackMenu: FC<BackMenuProps> = ({ text, textBtn, onClick }) => (
   <div className={styles.empty_list}>
-    <p>{text}</p>
+    <p className={styles.empty_title}>{text}</p>
     <NavLink to={'/'} onClick={onClick} className={styles.link}>
       {textBtn}
     </NavLink>

@@ -2,6 +2,7 @@
   font-size: 27px;
   font-weight: 800;
   text-align: center;
+  padding-top: 40px;
   color: var(--lt-color-white-100);
 }
 
@@ -10,8 +11,13 @@
   border-radius: 10px;
   background-color: var(--lt-color-orange-100);
 }
+
 .link:hover {
   color: var(--lt-color-gray-300);
+}
+
+.empty_title {
+  margin: 0 0 40px;
 }
 
 @media screen and (width <= 400px) {
